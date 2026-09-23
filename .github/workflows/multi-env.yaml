@@ -25,4 +25,6 @@ jobs:
         run: |
           echo "Deploying to ${{ vars.ENV }} environment..."
           echo "API_TOKEN is ${{ secrets.API_TOKEN }}"
+          echo "TEST_VAR is ${{ vars.TEST_VAR }}"
 
+  
