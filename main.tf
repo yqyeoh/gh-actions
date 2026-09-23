@@ -1,4 +1,13 @@
 terraform {
+  required_version = ">= 1.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+
   backend "s3" {
     bucket = "sctp-tfstate-ce13"
     key    = "yq/gh-actions-3-1"
@@ -11,7 +20,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "workshop" {
-  bucket_prefix = "yq-gh-actions"
+  bucket_prefix = "yq-gh-actions-ci"
   tags = {
     Purpose = "github-actions-workshop"
   }
