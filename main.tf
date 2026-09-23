@@ -11,7 +11,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "workshop" {
-  bucket_prefix = "yq-gh-actions"
+  bucket_prefix = "yq-gh-actions-ci"
   tags = {
     Purpose = "github-actions-workshop"
   }
